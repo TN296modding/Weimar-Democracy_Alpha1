@@ -19,7 +19,7 @@ title: Agricultural Organising
 subtitle: Leon Kopp can help with attracting farmworkers to rural unions.
 choose-if: advisor_action_timer <= 0 and (rural_policy > 0 or rural_campaigned >= 1)
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_campaigned <= 0 : The <span style="color: #c00000;">SPD</span> has not campaigned enough among the rural populace. ?]
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; trun_infl += 1; trun_rur_perc += rural_spd/2000; trun_rur_perc += rural_campaigned/500; agr_cc += 1;
+on-arrival: advisor_action_timer = 6
 
 We have organised farmworkers across Germany, which has also bolstered our influence among the trade unions
 
@@ -41,7 +41,7 @@ on-arrival: {!
 Q.advisor_action_timer = 6;
 Q.others_relation += 10;
 Q.cnblp_relation += 10;
-Q.dbp_relations += 10;
+Q.dbp_relation += 10;
 Q.rural_relations_unlocked = 1;
 if (Q.cnblp_relation >= 40) { 
 Q.cnblp_left += 1;
