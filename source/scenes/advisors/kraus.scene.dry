@@ -26,19 +26,17 @@ We have organised farmworkers across Germany, which has also bolstered our influ
 
 @talking_farm_union
 title: Building a Farmworkers Union
-subtitle: Create a Farmworkers Union, strengthening the Rural base.
-view-if: syndicalism = 1
-choose-if: advisor_action_timer == 0 and rural_policy > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
-on-arrival: advisor_action_timer = 6; iww_infl += 1; iww_rur_perc += rural_spd/500; iww_infiltrated += 1;
+subtitle: Create a Farmworkers Union, strengthening socialism within the Rural base.
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6
 
-We have increased our influence among the rural IWW branches.
+We have made progress towards building a Farmworkers Union
 
 @faud_ally
 title: Co-operation with the FAUD
 subtitle: Try to ally and work with the FAUD
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; trun_infl += 1; trun_rur_perc += rural_spd/1000; adgb_infiltrated += 1; cnblp_left += 1 if cnblp_relation >= 40
-
-We have increased our influecnea mong the rural ADGB branches
+on-arrival: advisor_action_timer = 6
+go-to: faud_cooperation_scene
