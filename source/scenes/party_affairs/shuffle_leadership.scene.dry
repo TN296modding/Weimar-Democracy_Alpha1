@@ -362,7 +362,7 @@ view-if: neorevisionism > 0 and n_advisors < 3
 @agsoc
 view-if: agrarian_socialism > 0 and n_advisors < 3
 
-- @agsoc_advisor
+- #agsoc_advisor
 
 @nonfactional
 view-if: n_advisors < 3
