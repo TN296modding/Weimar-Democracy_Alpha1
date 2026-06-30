@@ -39,7 +39,9 @@ choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: {!
 Q.advisor_action_timer = 6;
-Q.rural_relations_unlocked = 1;
+if (!Q.rural_relations_unlocked) {
+    Q.rural_relations_unlocked = 1;
+}
 // add a feature that increases X party left by (party_relation/10), minus 3. This would only happen if the party's relation was greater than 40, to prevent a reduction in _left 
 !}
 

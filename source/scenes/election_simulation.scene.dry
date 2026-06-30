@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'dbp', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -29,6 +29,7 @@ Q.workers_ddp = 0;
 Q.workers_dvp = 0;
 Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
+Q.workers_dbp = 0;
 Q.workers_other = 10;
 
 Q.old_middle_spd = 5;
@@ -38,6 +39,7 @@ Q.old_middle_ddp= 10;
 Q.old_middle_dvp = 25;
 Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 10;
+Q.old_middle_dbp = 0;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
@@ -47,6 +49,7 @@ Q.new_middle_ddp= 25;
 Q.new_middle_dvp = 25;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
+Q.new_middle_dbp = 0;
 Q.new_middle_other = 15;
 
 Q.rural_spd = 10;
@@ -56,6 +59,7 @@ Q.rural_ddp= 5;
 Q.rural_dvp = 15;
 Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
+Q.rural_dbp = 6;
 Q.rural_other = 10;
 
 Q.unemployed_spd = 25;
@@ -65,6 +69,7 @@ Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
 Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
+Q.unemployed_dbp = 0;
 Q.unemployed_other = 9;
 
 Q.catholics_spd = 15;
@@ -74,6 +79,7 @@ Q.catholics_ddp = 0;
 Q.catholics_dvp = 5;
 Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
+Q.catholics_dbp = 0;
 Q.catholics_other = 10;
 !}
 go-to: election_algorithm
@@ -253,6 +259,7 @@ Q.ddp_r = Q.ddp_votes;
 Q.dvp_r = Q.dvp_votes;
 Q.dnvp_r = Q.dnvp_votes;
 Q.nsdap_r = Q.nsdap_votes;
+Q.dbp_r = Q.dbp_votes;
 Q.other_r = Q.other_votes;
 
 // The largest party can only be the NSDAP or the SPD.
@@ -303,6 +310,8 @@ DNVP: [+ dnvp_r +]
 
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_r +]
+
+DBP: [+ dbp_r +]
 
 # 1928: 9, 1930: 10
 Other: [+ other_r +]

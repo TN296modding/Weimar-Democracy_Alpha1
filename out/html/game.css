@@ -566,6 +566,9 @@ table {
 .seat.nsdap {
     fill: #954B00;
 }
+.seat.dbp {
+  fill: #097100
+}
 .seat.sapd {
     fill: #C40000;
 }
