@@ -353,9 +353,6 @@ VRP: [+ vrp_r +]
 
 WP: [+ wp_r +]
 
-# 1928: 9, 1930: 10
-Other: [+ other_r +]
-
 **Potential coalitions:**
 
 Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
