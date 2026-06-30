@@ -1,2 +1,2 @@
 Alpha 1:
-Added AgSoc faction, Class Consciousness, Advisors, New Agricultural Policy optiobs
+Added AgSoc faction, Class Consciousness, Advisors, New Agricultural Policy options, and smaller parties
